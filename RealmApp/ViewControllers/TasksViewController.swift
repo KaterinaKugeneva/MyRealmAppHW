@@ -70,7 +70,8 @@ class TasksViewController: UITableViewController {
         let doneAction = UIContextualAction(style: .normal, title: "Done") { _, _, isDone in
             StorageManager.shared.doneTask(task)
             isDone(true)
-            tableView.reloadData()
+            //tableView.reloadData()
+            tableView.reloadSections([0,1], with: .automatic)
             
         }
         
