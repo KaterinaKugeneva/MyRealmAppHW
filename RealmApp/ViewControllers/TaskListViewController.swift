@@ -33,6 +33,7 @@ class TaskListViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        sortingList(segmentedControl)
         tableView.reloadData()
     }
     
