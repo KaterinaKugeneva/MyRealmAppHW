@@ -67,7 +67,7 @@ class TasksViewController: UITableViewController {
             isDone(true) 
         }
         
-        let doneAction = UIContextualAction(style: .normal, title: "Done") { _, _, isDone in
+        let doneAction = UIContextualAction(style: .normal, title: task.isComplete ? "Undone" : "Done") { _, _, isDone in
             StorageManager.shared.doneTask(task)
             isDone(true)
             //tableView.reloadData()
